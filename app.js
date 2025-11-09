@@ -13,6 +13,7 @@ const mongoUrl = config.MONGODB_URI;
 mongoose.set('strictQuery', false);
 mongoose.connect(mongoUrl);
 
+app.use(express.static('dist'))
 app.use(express.json());
 app.use(middleware.tokenExtractor);
 
