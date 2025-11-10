@@ -13,7 +13,6 @@ const mongoUrl = config.MONGODB_URI;
 mongoose.set('strictQuery', false);
 mongoose
   .connect(mongoUrl, {
-    useNewUrlParser: true,
     useUnifiedTopology: true,
     tls: true,
   })
